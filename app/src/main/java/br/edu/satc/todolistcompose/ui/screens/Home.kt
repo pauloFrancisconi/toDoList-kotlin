@@ -199,6 +199,7 @@ fun NewTask(showBottomSheet: Boolean, onComplete: () -> Unit) {
                 Button(modifier = Modifier.padding(top = 4.dp), onClick = {
                     scope.launch { sheetState.hide() }.invokeOnCompletion {
                         if (!sheetState.isVisible) {
+                            //logica
                             onComplete()
                         }
                     }
